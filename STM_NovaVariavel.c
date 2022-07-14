@@ -6,12 +6,13 @@ while (1)
 	 	  numero_sorteado=numero_sorteado%2;
 
 	 	 //Verificação dos numeros sorteados
-	 	  if (numero_sorteado == 0){
-	 	    HAL_GPIO_WritePin(GPIOA, 2, 1);
-	 	    }
-	 	  else if (numero_sorteado == 1){
-	 	    HAL_GPIO_WritePin(GPIOA, 1, 1);
-	 	    }
+	 	 if (numero_sorteado == 0){
+	 	 	 HAL_GPIO_WritePin(GPIOA, 2, 1);
+	 	 	 	    }
+	      else if (numero_sorteado == 1){
+	 	 	  HAL_GPIO_WritePin(GPIOA, 1, 1);
+	 	 	 	    }
+
 
 	 	 while ((HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == 1) || (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_1) == 1) ||
 	 	  (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_10) == 1) || (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_0) == 11))
@@ -74,44 +75,44 @@ while (1)
 	 	/******************************************************************************************************************/
 
 	 	    if (valor_jogador1 == 1){
-	 	    HAL_GPIO_WritePin(GPIOA, 5, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 	 	    }
 
 	 	    else if (valor_jogador1 == 2){
-	 	    HAL_GPIO_WritePin(GPIOA, 4, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 1);
 	 	    }
 
 	 	    else if (valor_jogador1 == 3){
-	 	    HAL_GPIO_WritePin(GPIOA, 3, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, 1);
 	 	    HAL_Delay(1500);
-	 	    HAL_GPIO_WritePin(GPIOA, 3, 1);
-	 	    HAL_GPIO_WritePin(GPIOA, 4, 1);
-	 	    HAL_GPIO_WritePin(GPIOA, 5, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 1);
 	 	    HAL_Delay(1000);
-	 	    HAL_GPIO_WritePin(GPIOA, 3, 0);
-	 	    HAL_GPIO_WritePin(GPIOA, 4, 0);
-	 	    HAL_GPIO_WritePin(GPIOA, 5, 0);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_3, 0);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_4, 0);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, 0);
 	 	    valor_jogador1 = 0;
 	 	    }
 
 	 	    else if (valor_jogador2 == 1){
-	 	    HAL_GPIO_WritePin(GPIOA, 0, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, 1);
 	 	    }
 
 	 	    else if (valor_jogador2 == 2){
-	 	    HAL_GPIO_WritePin(GPIOB, 12, 1);
+	 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 1);
 	 	    }
 
 	 	    else if (valor_jogador2 == 3){
-	 	    HAL_GPIO_WritePin(GPIOB, 13, 1);
+	 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
 	 	    HAL_Delay(1500);
-	 	    HAL_GPIO_WritePin(GPIOB, 13, 1);
-	 	    HAL_GPIO_WritePin(GPIOB, 12, 1);
-	 	    HAL_GPIO_WritePin(GPIOA, 0, 1);
+	 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 1);
+	 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 1);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, 1);
 	 	    HAL_Delay(1000);
-	 	    HAL_GPIO_WritePin(GPIOB, 13, 0);
-	 	    HAL_GPIO_WritePin(GPIOB, 12, 0);
-	 	    HAL_GPIO_WritePin(GPIOA, 0, 0);
+	 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_13, 0);
+	 	    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_12, 0);
+	 	    HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, 0);
 	 	    valor_jogador2 = 0;
 	 	    }
 
